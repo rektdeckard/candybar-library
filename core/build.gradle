@@ -1,5 +1,4 @@
 apply plugin: 'com.android.library'
-apply plugin: 'me.tatarka.retrolambda'
 apply plugin: 'com.github.dcendents.android-maven'
 
 group = 'com.github.danimahardhika'
@@ -54,9 +53,10 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
     }
+    buildToolsVersion = '28.0.3'
     
     lintOptions {
         abortOnError false
@@ -72,8 +72,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-
-    retrolambdaConfig 'net.orfjackal.retrolambda:retrolambda:2.5.1'
     implementation project (':library:PreLollipopTransitions')
 
     implementation "com.android.support:appcompat-v7:$rootProject.ext.SupportLibrary"
@@ -92,7 +90,7 @@ dependencies {
     implementation 'com.mikhaellopez:circularimageview:3.0.2'
     implementation 'com.anjlab.android.iab.v3:library:1.0.44'
     implementation 'com.github.chrisbanes:PhotoView:1.3.1'
-    implementation 'com.google.android.apps.muzei:muzei-api:2.0'
+    implementation 'com.google.android.apps.muzei:muzei-api:3.1.0'
     implementation 'com.github.danimahardhika:DrawMe:4a672e78fc'
     implementation 'org.sufficientlysecure:html-textview:3.5'
     implementation 'me.grantland:autofittextview:0.2.1'
