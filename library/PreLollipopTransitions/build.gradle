@@ -17,7 +17,7 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.github.dcendents.android-maven'
 
-group = 'com.github.danimahardhika'
+group = 'com.github.rektdeckard'
 
 android {
     compileSdkVersion rootProject.ext.CompileSdk
